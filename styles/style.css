@@ -19,7 +19,7 @@ body::after {
   width: 100%;
   height: 100dvh;
   background: rgb(0, 0, 0, .15);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
 }
 
 .regular-text {
@@ -33,7 +33,7 @@ body::after {
   border-radius: 15px;
   backdrop-filter: blur(100px);
   z-index: 5;
-  padding: 20px 15px;
+  padding: 25px;
 }
 
 .header-inner {
@@ -98,4 +98,63 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.weather-summary-info {
+  text-align: end;
+}
+
+.weather-conditions-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.condition-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forecast-items-wrapper {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+}
+
+.forecast-items-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-items-wrapper::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.1);
+  border-radius: 99px;
+}
+
+.forecast-items-wrapper::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0, 0.15);
+  border-radius: 99px;
+}
+
+.forecast-item {
+  padding: 10px;
+  min-width: 71px;
+  background: rgb(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border-radius: 12px;
+  transition: 0.35s all;
+}
+
+.forecast-item:hover {
+  background: rgb(255, 255, 255, 0.15);
+}
+
+.forecast-item-image {
+  max-width: 35px;
+  max-height: 35px;
 }
